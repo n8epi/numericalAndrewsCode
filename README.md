@@ -1,6 +1,6 @@
 # Numerical Andrews: minimal reproduction repository
 
-This source-only subset reproduces the numerical experiments in *Numerical
+This reproduces the numerical experiments in *Numerical
 Approximation of Andrews Plots with Optimal Spatial-Spectral Smoothing*.
 Use this directory as the root of a GitHub repository. No sibling directories,
 saved search results, datasets, figures, or tables are needed as inputs.
