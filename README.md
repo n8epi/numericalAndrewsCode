@@ -100,9 +100,7 @@ search winner. Runtime measurements will naturally differ on another machine.
 
 There are no precomputed publication numbers to load or silently substitute.
 CSV/JSON outputs supply the detailed supplementary tables and diagnostics;
-the manuscript text and editorial supplement are not duplicated here. The
-larger `revision/code` distribution remains the archival package with saved
-publication artifacts.
+the manuscript text and editorial supplement are not duplicated here.
 
 ## Checks and implementation
 
