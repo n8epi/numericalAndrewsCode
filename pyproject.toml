@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools==84.0.0", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numerical-andrews"
+version = "0.1.0"
+description = "Source-only reproduction of the Numerical Andrews paper and supporting experiments"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy==2.5.3", "scipy==1.18.1", "pandas==2.3.3", "matplotlib==3.11.2", "scikit-learn==1.9.1", "Pillow==12.3.0"]
+
+[project.scripts]
+numerical-andrews = "numerical_andrews.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["numerical_andrews", "numerical_andrews.experiments"]
+
+[tool.setuptools.package-data]
+numerical_andrews = ["fc_reference_provenance.json"]

@@ -1,0 +1,33 @@
+{
+  "reference_title": "Feature Congestion and Subband Entropy measures of visual clutter",
+  "authors": [
+    "Ruth Rosenholtz",
+    "Yuanzhen Li",
+    "Lisa Nakano"
+  ],
+  "issued": "2007-06-04",
+  "landing_url": "https://hdl.handle.net/1721.1/37593",
+  "download_url": "https://dspace.mit.edu/server/api/core/bitstreams/4e014f06-ff99-40ef-9c60-8cfa0dd87cc4/content",
+  "archive": "VisualClutterJune07.zip",
+  "archive_md5": "179aa0ab51f472393cb8dc632109307b",
+  "archive_sha256": "f23699ea4a96f21a7d4c97fc33b8ced25e6a5ff96af53168fb58f04491b894a8",
+  "files": {
+    "RGB2Lab.m": "11c6a3144993ce0df9df1e02e12a5701bfcf204e78efa16c3ebf9dc8dc9ebc35",
+    "RRgaussianPyramid.m": "89910b64d7829e564ae96138fa9a8b2b0bde9119c53e7cceeadff0aa11649243",
+    "reduce.m": "4a355cad8d0d73847a3f4a1618a575a8c5a85a0f131b681e71662f070629aaac",
+    "filt2.m": "2d12982e982f5f3c1eefc04e58c816126141cdbd727e340e9aa0013e474e4552",
+    "addborder.m": "7915372471b4431c9a3249852ad6e10eec6029ec3f4c8008b6a1f371ff2aedd6"
+  },
+  "verification": "Source inspection and independent scalar/convolution Python reference checks; no MATLAB runtime execution",
+  "python_port": {
+    "name": "visual-clutter",
+    "version": "1.0.7",
+    "author": "Amir Hossein Kargaran",
+    "url": "https://github.com/kargaranamir/visual-clutter",
+    "installed_files_sha256": {
+      "clutter.py": "c7990eb21053abe643394929bd3329c6b676dc7d26b246ed7c63d3632b548e27",
+      "utils.py": "a33d0485ade4628a0ef3783635c01a0e8181db092d9d44623110731f5de1886d"
+    }
+  },
+  "verified_on": "2026-09-23"
+}
