@@ -1,0 +1,62 @@
+[
+  {
+    "dataset": "iris",
+    "alpha": 3.8704488018179757,
+    "aggregate_pairwise_inside_fraction": 0.749999999999997,
+    "mmqv_y_limits": [
+      -6.100439965153435,
+      5.172505079987777
+    ],
+    "mmssqv_y_limits": [
+      -5.932334729153696,
+      6.822125427617042
+    ],
+    "mmqv_median_fc": 5.1936266895037235,
+    "mmssqv_median_fc": 4.479051397881145,
+    "between_method_tie": false,
+    "maximum_mode_l2_change": 1.2490686929120674e-16,
+    "maximum_eigenvalue_change": 5.329070518200751e-15,
+    "maximum_sampled_basis_change": 6.661338147750939e-16,
+    "elapsed_seconds": 240.7599707079935
+  },
+  {
+    "dataset": "bc",
+    "alpha": 4.245672384033757,
+    "aggregate_pairwise_inside_fraction": 0.7499999999999956,
+    "mmqv_y_limits": [
+      -1269.588538130182,
+      4653.5478720222445
+    ],
+    "mmssqv_y_limits": [
+      -6084.910818193464,
+      1574.0666853540913
+    ],
+    "mmqv_median_fc": 5.107982470094777,
+    "mmssqv_median_fc": 2.560500111270479,
+    "between_method_tie": false,
+    "maximum_mode_l2_change": 2.221807568742794e-16,
+    "maximum_eigenvalue_change": 3.774758283725532e-15,
+    "maximum_sampled_basis_change": 6.661338147750939e-16,
+    "elapsed_seconds": 606.4328902079724
+  },
+  {
+    "dataset": "diabetes",
+    "alpha": 0.31543718609268534,
+    "aggregate_pairwise_inside_fraction": 0.749999999999964,
+    "mmqv_y_limits": [
+      -0.6481007850748378,
+      0.7554175756717844
+    ],
+    "mmssqv_y_limits": [
+      -1.0424325101108836,
+      0.6602088049276882
+    ],
+    "mmqv_median_fc": 7.06749451443713,
+    "mmssqv_median_fc": 3.098110008315533,
+    "between_method_tie": false,
+    "maximum_mode_l2_change": 2.543840527923968e-16,
+    "maximum_eigenvalue_change": 6.217248937900877e-15,
+    "maximum_sampled_basis_change": 8.881784197001252e-16,
+    "elapsed_seconds": 569.3744949169923
+  }
+]

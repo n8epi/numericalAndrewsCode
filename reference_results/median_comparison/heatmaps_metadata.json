@@ -1,0 +1,208 @@
+{
+  "scorer": "Original unaccelerated feature_congestion implementation",
+  "input_protocol_file": "protocol.json",
+  "input_protocol_sha256": "78794deb28d0df05eca48db55686745fdf671378ef56a732328ae22a0f2fc93c",
+  "saved_maps_file": "heatmaps.npz",
+  "saved_maps_sha256": "7f7b583aace19db0eb69163b50e10d40de30fdc8978663a00b8fae1bbbd092ac",
+  "saved_maps": "Six uncapped float64 arrays; lossless compressed NPZ",
+  "colormap": "magma",
+  "scale": "linear, common within each dataset row",
+  "display_cap": "99.5th percentile pooled over both uncapped maps in each row",
+  "colorbar_extend": "max",
+  "score_pooling": "All raw pixels; no visual cap applied",
+  "orientation": "origin=upper matches source rasters; each extent is [-0.5,0.5] x the individual plot's saved y_limits",
+  "vertical_range_protocol": "Each source plot's own minimum/maximum curve heights plus 5% of its span at each end",
+  "rows": [
+    {
+      "dataset": "iris",
+      "alpha": 3.8704488018179757,
+      "record_sha256": "006d4fa18b512de2987c0022b143fdec80bb5bcae5af97ea4e1cc7a2a9a74abc",
+      "methods": {
+        "mmqv": {
+          "raster_file": "iris_mmqv.png",
+          "raster_sha256": "04f2aa0d9bd4e1f87445f41e468d55feced9b441c4343cbd3885c4ef02ffe19d",
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "float64",
+          "raw_minimum": 1.2482831562147778,
+          "raw_maximum": 14.288666850209466,
+          "raw_mean_fc": 4.8408266676035385,
+          "raw_median_fc": 5.1936266895037235,
+          "y_limits": [
+            -6.100439965153435,
+            5.172505079987777
+          ],
+          "curve_y_extrema": [
+            -5.588033372192471,
+            4.660098487026813
+          ],
+          "expected_median_fc": 5.1936266895037235,
+          "median_validation_absolute_error": 0.0,
+          "mean_validation_absolute_error": 0.0
+        },
+        "mmssqv": {
+          "raster_file": "iris_mmssqv.png",
+          "raster_sha256": "ae0eb825577d02f924c7d0f3f186b4846e3cb2f3371a9f54047ec8db2804be5c",
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "float64",
+          "raw_minimum": 1.2482831558633007,
+          "raw_maximum": 14.826256090271215,
+          "raw_mean_fc": 4.444394968300797,
+          "raw_median_fc": 4.479051397881145,
+          "y_limits": [
+            -5.932334729153696,
+            6.822125427617042
+          ],
+          "curve_y_extrema": [
+            -5.352586540209571,
+            6.242377238672917
+          ],
+          "expected_median_fc": 4.479051397881145,
+          "median_validation_absolute_error": 0.0,
+          "mean_validation_absolute_error": 0.0
+        }
+      },
+      "display_minimum": 0.0,
+      "display_maximum": 11.217984518852319,
+      "pooled_quantile": 0.995,
+      "pooled_raw_maximum": 14.826256090271215,
+      "pooled_fraction_above_display_cap": 0.005001068115234375
+    },
+    {
+      "dataset": "bc",
+      "alpha": 4.245672384033757,
+      "record_sha256": "7dfd39814b98ec9bef57ab5e393b6defaf49a15479c753a308c19909aa3758e7",
+      "methods": {
+        "mmqv": {
+          "raster_file": "bc_mmqv.png",
+          "raster_sha256": "7d3fdf62e358232a639c427f3103cd09287e00b062e67f1421af9fcae7d2ac64",
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "float64",
+          "raw_minimum": 1.248283155863303,
+          "raw_maximum": 13.324268732690605,
+          "raw_mean_fc": 4.570764063818564,
+          "raw_median_fc": 5.107982470094777,
+          "y_limits": [
+            -1269.588538130182,
+            4653.5478720222445
+          ],
+          "curve_y_extrema": [
+            -1000.3550649414354,
+            4384.314398833498
+          ],
+          "expected_median_fc": 5.107982470094777,
+          "median_validation_absolute_error": 0.0,
+          "mean_validation_absolute_error": 0.0
+        },
+        "mmssqv": {
+          "raster_file": "bc_mmssqv.png",
+          "raster_sha256": "80346dcd4d3a74dca3d95a740c0f75e55f1c8f5d0892c200313aecb4a4d71656",
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "float64",
+          "raw_minimum": 1.2482831558633007,
+          "raw_maximum": 13.31375990188494,
+          "raw_mean_fc": 3.74645762500425,
+          "raw_median_fc": 2.560500111270479,
+          "y_limits": [
+            -6084.910818193464,
+            1574.0666853540913
+          ],
+          "curve_y_extrema": [
+            -5736.775477123121,
+            1225.9313442837479
+          ],
+          "expected_median_fc": 2.560500111270479,
+          "median_validation_absolute_error": 0.0,
+          "mean_validation_absolute_error": 0.0
+        }
+      },
+      "display_minimum": 0.0,
+      "display_maximum": 10.257894668727365,
+      "pooled_quantile": 0.995,
+      "pooled_raw_maximum": 13.324268732690605,
+      "pooled_fraction_above_display_cap": 0.005001068115234375
+    },
+    {
+      "dataset": "diabetes",
+      "alpha": 0.31543718609268534,
+      "record_sha256": "ed191be91b5fa51097f835718789195b5d29bf46adc168c22c8ae37e9244af53",
+      "methods": {
+        "mmqv": {
+          "raster_file": "diabetes_mmqv.png",
+          "raster_sha256": "23ea558b3ded237ca9133874f4dc162e7e891db3e4b3d1791e8368724fd81cde",
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "float64",
+          "raw_minimum": 1.2482831558633007,
+          "raw_maximum": 16.111337673256664,
+          "raw_mean_fc": 6.679180523523976,
+          "raw_median_fc": 7.06749451443713,
+          "y_limits": [
+            -0.6481007850748378,
+            0.7554175756717844
+          ],
+          "curve_y_extrema": [
+            -0.5843044959499913,
+            0.6916212865469379
+          ],
+          "expected_median_fc": 7.06749451443713,
+          "median_validation_absolute_error": 0.0,
+          "mean_validation_absolute_error": 0.0
+        },
+        "mmssqv": {
+          "raster_file": "diabetes_mmssqv.png",
+          "raster_sha256": "b248ebb06f0549257a3375d8b4a8d0f27c7043d6f4a9a98612272b42380be4f1",
+          "shape": [
+            512,
+            768
+          ],
+          "dtype": "float64",
+          "raw_minimum": 1.2482831558633007,
+          "raw_maximum": 15.833467399931283,
+          "raw_mean_fc": 5.3325426936520275,
+          "raw_median_fc": 3.098110008315533,
+          "y_limits": [
+            -1.0424325101108836,
+            0.6602088049276882
+          ],
+          "curve_y_extrema": [
+            -0.9650397230636757,
+            0.5828160178804804
+          ],
+          "expected_median_fc": 3.098110008315533,
+          "median_validation_absolute_error": 0.0,
+          "mean_validation_absolute_error": 0.0
+        }
+      },
+      "display_minimum": 0.0,
+      "display_maximum": 14.503936035622287,
+      "pooled_quantile": 0.995,
+      "pooled_raw_maximum": 16.111337673256664,
+      "pooled_fraction_above_display_cap": 0.005001068115234375
+    }
+  ],
+  "elapsed_seconds": 39.23606895800913,
+  "source_sha256": {
+    "experiments/render_median_heatmaps.py": "474d4ee434c5766545a22aae91e43f14884e885512f03002befb182195f264bb",
+    "congestion.py": "50b0422cae1c088e41494ec1715b5323791d3a48cfecbe3bf4172dd878367ddd"
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2",
+    "Pillow": "12.3.0",
+    "visual-clutter": "1.0.7"
+  }
+}

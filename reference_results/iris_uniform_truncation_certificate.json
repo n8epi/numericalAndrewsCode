@@ -1,0 +1,22 @@
+{
+  "alpha": "1/5",
+  "dataset_dimension": 4,
+  "requested_uniform_tolerance": "1/1000000000000",
+  "exact_centered_iris_max_norm_squared": "3684999/250000",
+  "centered_iris_norm_upper": "4",
+  "logarithmic_cutoff_checks": {
+    "inverse_alpha_square_root_upper": "47/21",
+    "inverse_alpha_square_root_upper_squared": "2209/441",
+    "leading_term_upper": "89",
+    "dimension_square_root": 2,
+    "prefactor_upper": "8",
+    "logarithm_argument_upper": "8000000000001",
+    "preceding_power_of_four": 4398046511104,
+    "enclosing_power_of_four": 17592186044416,
+    "added_frequencies": 22
+  },
+  "symmetric_cutoff": 111,
+  "global_uniform_curve_error_upper": "1/2199023255552",
+  "global_uniform_curve_error_upper_display": 4.547473508864641e-13,
+  "statement": "Exact finite-eigenpair truncation error, before floating-point eigensolver, PCA, and curve-evaluation error. The cutoff uses rational upper bounds in the explicit formula of Theorem 3, with no spectral calculations or fitted parameters."
+}

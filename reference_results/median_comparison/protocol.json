@@ -1,0 +1,82 @@
+{
+  "objective": "Median over every pixel of the uncapped local Feature Congestion map",
+  "alpha_selection": "75% aggregate pairwise squared L2 separation in the central half; refine the highest-alpha downward grid bracket before FC",
+  "candidate_pool_size_per_method": 256,
+  "mmqv_sampling": "Two named bases and 254 independent uniform phases, O(2) reflections, and constant signs",
+  "mmssqv_sampling": "256 independent uniform {-1,+1} sign vectors; duplicate evaluations cached",
+  "range_protocol": "Each candidate uses its own minimum/maximum curve heights, plus 5% of its span at each end",
+  "padding_fraction_of_span": 0.05,
+  "raster": {
+    "width": 768,
+    "height": 512,
+    "dpi": 100,
+    "line_width_points": 0.65,
+    "line_alpha": 0.52,
+    "decorations": "none in scored rasters",
+    "background": "#E5ECF6"
+  },
+  "seeds": {
+    "iris": [
+      202610031,
+      202610032
+    ],
+    "bc": [
+      202610033,
+      202610034
+    ],
+    "diabetes": [
+      202610035,
+      202610036
+    ]
+  },
+  "score_tie_tolerance": 1e-08,
+  "global_optimality_claim": false,
+  "mmssqv_sign_coverage": {
+    "iris": {
+      "unique_sign_patterns": 16,
+      "total_sign_patterns": 16,
+      "exhaustive": true,
+      "scope": "Fixed alpha, finite cutoff, and stated rendering/scoring protocol"
+    },
+    "bc": {
+      "unique_sign_patterns": 256,
+      "total_sign_patterns": 1073741824,
+      "exhaustive": false,
+      "scope": "Fixed alpha, finite cutoff, and stated rendering/scoring protocol"
+    },
+    "diabetes": {
+      "unique_sign_patterns": 231,
+      "total_sign_patterns": 1024,
+      "exhaustive": false,
+      "scope": "Fixed alpha, finite cutoff, and stated rendering/scoring protocol"
+    }
+  },
+  "elapsed_seconds": 609.2118107079878,
+  "workers": 3,
+  "numerical_library_threads": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "platform": "macOS-26.7-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.12.7",
+  "package_versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "Pillow": "12.3.0",
+    "visual-clutter": "1.0.7"
+  },
+  "source_sha256": {
+    "experiments/compare_median_congestion.py": "c4949ada8a9786f5326983efc30fa131736f18c82e1ba4e8fef19ed20248eaa0",
+    "mmqv_family.py": "74282831cf6d0f413f476e0581ec6852f110a1f638189f0346a2378f2e7a3b37",
+    "core.py": "3539e2b77bf4ccc69992c0d0972791fd1bd5dbdb75056393967c66006db112d7",
+    "congestion.py": "50b0422cae1c088e41494ec1715b5323791d3a48cfecbe3bf4172dd878367ddd",
+    "rendering.py": "9ef911016aee99ba4a08543909d484d0e62685449f5e9269153faa0bd06b7146",
+    "union_fc_acceleration.py": "7907430d3624a4be659e1548458e512c723b0ff7e2dcd86a514ef6ccb2bd79cf",
+    "fast_feature_congestion.py": "529ef191be1849ab42381b60b667cc98d7e8712599d144a9fd53facfe63043ed"
+  }
+}

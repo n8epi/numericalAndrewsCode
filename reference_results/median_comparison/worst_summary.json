@@ -1,0 +1,246 @@
+{
+  "scope": "Maximum median pixel FC over the existing 256 sampled MMSSQV sign choices per dataset; not a bound over unsampled signs",
+  "selection": "Maximum saved median_fc; first saved candidate breaks exact ties",
+  "score_tie_tolerance": 1e-08,
+  "input_protocol_sha256": "78794deb28d0df05eca48db55686745fdf671378ef56a732328ae22a0f2fc93c",
+  "source_sha256": {
+    "experiments/compare_median_congestion.py": "c4949ada8a9786f5326983efc30fa131736f18c82e1ba4e8fef19ed20248eaa0",
+    "core.py": "3539e2b77bf4ccc69992c0d0972791fd1bd5dbdb75056393967c66006db112d7",
+    "rendering.py": "9ef911016aee99ba4a08543909d484d0e62685449f5e9269153faa0bd06b7146",
+    "congestion.py": "50b0422cae1c088e41494ec1715b5323791d3a48cfecbe3bf4172dd878367ddd"
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "Pillow": "12.3.0",
+    "visual-clutter": "1.0.7"
+  },
+  "elapsed_seconds": 14.805828167009167,
+  "rows": [
+    {
+      "dataset": "iris",
+      "alpha": 3.8704488018179757,
+      "input_record_sha256": "006d4fa18b512de2987c0022b143fdec80bb5bcae5af97ea4e1cc7a2a9a74abc",
+      "mmssqv_sample_count": 256,
+      "mmssqv_sign_coverage": {
+        "unique_sign_patterns": 16,
+        "total_sign_patterns": 16,
+        "exhaustive": true,
+        "scope": "Fixed alpha, finite cutoff, and stated rendering/scoring protocol"
+      },
+      "worst_candidate": {
+        "index": 27,
+        "source": "random_signs",
+        "signs": [
+          -1,
+          1,
+          -1,
+          1
+        ],
+        "median_fc": 5.112324528496488,
+        "mean_fc": 4.797464619756718,
+        "y_limits": [
+          -5.918045986662592,
+          5.492158922108147
+        ],
+        "curve_y_extrema": [
+          -5.399400308991194,
+          4.97351324443675
+        ]
+      },
+      "tied_worst_candidate_indices": [
+        27,
+        38,
+        118,
+        119,
+        129,
+        185,
+        203,
+        213,
+        234,
+        237,
+        252
+      ],
+      "worst_mmssqv_median_fc": 5.112324528496979,
+      "worst_mmssqv_mean_fc": 4.797464619949487,
+      "best_mmqv_median_fc": 5.1936266895037235,
+      "best_mmssqv_median_fc": 4.479051397881145,
+      "worst_minus_best_mmqv": -0.08130216100674481,
+      "worst_to_best_mmqv_percent_change": -1.565421734508865,
+      "validation": {
+        "scorer": "Original unaccelerated feature_congestion",
+        "median_absolute_error": 4.902744876744691e-13,
+        "mean_absolute_error": 1.9276935603329548e-10,
+        "reconstructed_raster_rgb_sha256": "70432c894a1f20f7e741ec768807bff61d417b8c58a2797e34ce964dc32425f4",
+        "raster_shape": [
+          512,
+          768,
+          3
+        ],
+        "y_limits": [
+          -5.918045986662592,
+          5.492158922108147
+        ],
+        "curve_y_extrema": [
+          -5.399400308991194,
+          4.97351324443675
+        ]
+      }
+    },
+    {
+      "dataset": "bc",
+      "alpha": 4.245672384033757,
+      "input_record_sha256": "7dfd39814b98ec9bef57ab5e393b6defaf49a15479c753a308c19909aa3758e7",
+      "mmssqv_sample_count": 256,
+      "mmssqv_sign_coverage": {
+        "unique_sign_patterns": 256,
+        "total_sign_patterns": 1073741824,
+        "exhaustive": false,
+        "scope": "Fixed alpha, finite cutoff, and stated rendering/scoring protocol"
+      },
+      "worst_candidate": {
+        "index": 58,
+        "source": "random_signs",
+        "signs": [
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "median_fc": 3.7922804084726254,
+        "mean_fc": 4.0305181636363505,
+        "y_limits": [
+          -5395.346230217646,
+          1537.7541600485192
+        ],
+        "curve_y_extrema": [
+          -5080.205303387365,
+          1222.613233218239
+        ]
+      },
+      "tied_worst_candidate_indices": [
+        58
+      ],
+      "worst_mmssqv_median_fc": 3.7922804084727555,
+      "worst_mmssqv_mean_fc": 4.030518163852338,
+      "best_mmqv_median_fc": 5.107982470094777,
+      "best_mmssqv_median_fc": 2.560500111270479,
+      "worst_minus_best_mmqv": -1.3157020616220216,
+      "worst_to_best_mmqv_percent_change": -25.75776383973395,
+      "validation": {
+        "scorer": "Original unaccelerated feature_congestion",
+        "median_absolute_error": 1.3011813848606835e-13,
+        "mean_absolute_error": 2.1598722810267645e-10,
+        "reconstructed_raster_rgb_sha256": "f489ceef10b62b501ea27cf036cd7a331d3555fe38df4abb7a437949ba3af7f6",
+        "raster_shape": [
+          512,
+          768,
+          3
+        ],
+        "y_limits": [
+          -5395.346230217646,
+          1537.7541600485192
+        ],
+        "curve_y_extrema": [
+          -5080.205303387365,
+          1222.613233218239
+        ]
+      }
+    },
+    {
+      "dataset": "diabetes",
+      "alpha": 0.31543718609268534,
+      "input_record_sha256": "ed191be91b5fa51097f835718789195b5d29bf46adc168c22c8ae37e9244af53",
+      "mmssqv_sample_count": 256,
+      "mmssqv_sign_coverage": {
+        "unique_sign_patterns": 231,
+        "total_sign_patterns": 1024,
+        "exhaustive": false,
+        "scope": "Fixed alpha, finite cutoff, and stated rendering/scoring protocol"
+      },
+      "worst_candidate": {
+        "index": 85,
+        "source": "random_signs",
+        "signs": [
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "median_fc": 7.331168484610277,
+        "mean_fc": 6.873035072334045,
+        "y_limits": [
+          -0.653518003297131,
+          0.6333121851931607
+        ],
+        "curve_y_extrema": [
+          -0.5950257220021177,
+          0.5748199038981474
+        ]
+      },
+      "tied_worst_candidate_indices": [
+        85,
+        198
+      ],
+      "worst_mmssqv_median_fc": 7.331168484610267,
+      "worst_mmssqv_mean_fc": 6.873035072528069,
+      "best_mmqv_median_fc": 7.06749451443713,
+      "best_mmssqv_median_fc": 3.098110008315533,
+      "worst_minus_best_mmqv": 0.2636739701731372,
+      "worst_to_best_mmqv_percent_change": 3.7307983704057746,
+      "validation": {
+        "scorer": "Original unaccelerated feature_congestion",
+        "median_absolute_error": 9.769962616701378e-15,
+        "mean_absolute_error": 1.9402346396191206e-10,
+        "reconstructed_raster_rgb_sha256": "1890014d9614ebca37c9808b9b86f0f3c098f3eb9a4e6e219d834f23d52f7599",
+        "raster_shape": [
+          512,
+          768,
+          3
+        ],
+        "y_limits": [
+          -0.653518003297131,
+          0.6333121851931607
+        ],
+        "curve_y_extrema": [
+          -0.5950257220021177,
+          0.5748199038981474
+        ]
+      }
+    }
+  ]
+}

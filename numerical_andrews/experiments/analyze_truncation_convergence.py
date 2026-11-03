@@ -34,6 +34,7 @@ from numerical_andrews.core import load_example_datasets, spatial_spectral_modes
 ALPHA = 1.0e-3
 REFERENCE_CUTOFF = 512
 CUTOFFS = (15, 16, 20, 24, 28, 32, 40, 48, 64, 96, 128, 192, 256)
+TABLE_CUTOFFS = (16, 32, 48, 64, 96, 256)
 
 
 def parse_arguments() -> argparse.Namespace:
@@ -183,6 +184,28 @@ def compute_diagnostics() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     return modes, objectives, summary
 
 
+def write_convergence_table(summary: pd.DataFrame, output_directory: Path) -> None:
+    """Write the manuscript's maxima over all datasets and retained modes."""
+    columns = ("max_absolute_eigenvalue_error", "max_eigenvector_l2_error",
+               "objective_relative_error")
+    lines = [r"% Generated from theorem3_truncation_summary.csv.",
+             r"\begin{tabular}{rrrr}", r"\toprule",
+             r"$N$ & $E_\lambda(N)$ & $E_v(N)$ & $E_J(N)$\\",
+             r"\midrule"]
+    for cutoff in TABLE_CUTOFFS:
+        subset = summary[summary["cutoff_N"] == cutoff]
+        if len(subset) != 3 or set(subset["dataset"]) != {"iris", "bc", "diabetes"}:
+            raise ValueError(f"Expected one row per dataset at N={cutoff}")
+        cells = []
+        for column in columns:
+            mantissa, exponent = f"{subset[column].max():.2e}".split("e")
+            cells.append(rf"${mantissa}\times10^{{{int(exponent)}}}$")
+        lines.append(str(cutoff) + " & " + " & ".join(cells) + r"\\")
+    lines.extend([r"\bottomrule", r"\end{tabular}"])
+    (output_directory / "truncation_convergence_table.tex").write_text(
+        "\n".join(lines) + "\n")
+
+
 def plot_diagnostics(summary: pd.DataFrame, output_directory: Path) -> None:
     datasets = list(dict.fromkeys(summary["dataset"].tolist()))
     colors = {
@@ -307,6 +330,7 @@ def main() -> None:
     summary.to_csv(
         output_directory / "theorem3_truncation_summary.csv", index=False
     )
+    write_convergence_table(summary, output_directory)
     plot_diagnostics(summary, output_directory)
     iris_moderate_alpha_diagnostics().to_csv(
         output_directory / "iris_moderate_alpha_convergence.csv", index=False)
